@@ -64,6 +64,7 @@
     </div>
     </div>
     <script>
+        const fs = requir('fs');
         function handleData(data, chain) {
             console.log(typeof chain);
             //page will contain a list of the token symbols with a hyperlink to  the tokens page
@@ -73,7 +74,7 @@
             switch (chain) {
                 case 1:
                     chainExplorer = "https://etherscan.io/token/";
-                    console.log(data)
+                    fs.writeFileSync('utilstokens.json', res
 
                     //append page to the div for ethereum
                     for (let i = 0; i < data.length; i++) {
